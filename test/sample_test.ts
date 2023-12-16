@@ -1,12 +1,12 @@
 import { describe, test, expect, beforeAll } from "@jest/globals";
-import SayHello from "@src/index";
+import { fn } from "@src/index";
 
 describe("sample", () => {
     beforeAll(async () => {
         console.log("where i am");
     });
     test("test", async () => {
-        SayHello();
+        fn.sayHello();
         expect(1).toEqual(1);
     });
 });
