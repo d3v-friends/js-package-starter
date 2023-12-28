@@ -1,3 +1,4 @@
+import path from "path";
 import { JestConfigWithTsJest } from "ts-jest";
 
 const config: JestConfigWithTsJest = {
@@ -6,7 +7,7 @@ const config: JestConfigWithTsJest = {
     testRegex: "^.+[ts|js|tsx|jsx]$",
     transform: {},
     moduleNameMapper: {
-        "^@src/(.*)$": "<rootDir>/ts/$1"
+        "^@src/(.*)$": path.resolve("<rootDir>", "..",  "$1"),
     },
 };
 

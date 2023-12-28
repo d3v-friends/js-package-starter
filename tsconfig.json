@@ -5,17 +5,12 @@
       "es6",
       "esnext"
     ],
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
     "allowJs": true,
     "checkJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "inlineSourceMap": true,
-    "declaration": true,
-    "removeComments": true,
     // type check
     "strict": true,
     "alwaysStrict": true,
@@ -25,23 +20,21 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    // paths
-    "rootDir": "./ts",
+    // path
+    "rootDir": "src",
+    "baseUrl": ".",
     "paths": {
       "@src/*": [
-        "./ts/*"
-      ],
-      "@src": [
-        "./ts/index.ts"
+        "src/*"
       ]
     }
   },
   "include": [
-    "./ts",
-    "./test"
+    "src"
   ],
   "exclude": [
-    "./node_modules",
-    "./cjs"
+    "node_modules",
+    "dist",
+    "config"
   ]
 }
